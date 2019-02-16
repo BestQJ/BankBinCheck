@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "BankBinManager.h"
 @interface ViewController ()
 
 @end
@@ -16,8 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
 
+    BOOL isBankCad = [[BankBinManager sharedInstance] checkCardNo: @"6214837832650661"];
+    NSLog(@"是否是正确银行卡号: %@", isBankCad ? @"是" : @"否");
+    NSString *bankName = [[BankBinManager sharedInstance] getBankName: @"6228483859331018875"];
+    NSLog(@"银行卡名称%@", bankName);
+    
+}
 
 @end

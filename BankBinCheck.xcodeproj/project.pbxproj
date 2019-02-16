@@ -15,6 +15,9 @@
 		8473D4C12217DE09007DAACC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8473D4C02217DE09007DAACC /* main.m */; };
 		8473D4CB2217DE09007DAACC /* BankBinCheckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8473D4CA2217DE09007DAACC /* BankBinCheckTests.m */; };
 		8473D4D62217DE09007DAACC /* BankBinCheckUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8473D4D52217DE09007DAACC /* BankBinCheckUITests.m */; };
+		8473D4E72217DE13007DAACC /* BankBinModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8473D4E52217DE13007DAACC /* BankBinModel.m */; };
+		8473D4E82217DE13007DAACC /* BankBinManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8473D4E62217DE13007DAACC /* BankBinManager.m */; };
+		8473D4EB2217DEB5007DAACC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8473D4EA2217DEB5007DAACC /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,11 @@
 		8473D4D12217DE09007DAACC /* BankBinCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankBinCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8473D4D52217DE09007DAACC /* BankBinCheckUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BankBinCheckUITests.m; sourceTree = "<group>"; };
 		8473D4D72217DE09007DAACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8473D4E32217DE13007DAACC /* BankBinManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankBinManager.h; sourceTree = "<group>"; };
+		8473D4E42217DE13007DAACC /* BankBinModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankBinModel.h; sourceTree = "<group>"; };
+		8473D4E52217DE13007DAACC /* BankBinModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankBinModel.m; sourceTree = "<group>"; };
+		8473D4E62217DE13007DAACC /* BankBinManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankBinManager.m; sourceTree = "<group>"; };
+		8473D4EA2217DEB5007DAACC /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8473D4EB2217DEB5007DAACC /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +94,7 @@
 				8473D4C92217DE09007DAACC /* BankBinCheckTests */,
 				8473D4D42217DE09007DAACC /* BankBinCheckUITests */,
 				8473D4AF2217DE07007DAACC /* Products */,
+				8473D4E92217DEB4007DAACC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +111,10 @@
 		8473D4B02217DE07007DAACC /* BankBinCheck */ = {
 			isa = PBXGroup;
 			children = (
+				8473D4E32217DE13007DAACC /* BankBinManager.h */,
+				8473D4E62217DE13007DAACC /* BankBinManager.m */,
+				8473D4E42217DE13007DAACC /* BankBinModel.h */,
+				8473D4E52217DE13007DAACC /* BankBinModel.m */,
 				8473D4B12217DE07007DAACC /* AppDelegate.h */,
 				8473D4B22217DE07007DAACC /* AppDelegate.m */,
 				8473D4B42217DE07007DAACC /* ViewController.h */,
@@ -130,6 +144,14 @@
 				8473D4D72217DE09007DAACC /* Info.plist */,
 			);
 			path = BankBinCheckUITests;
+			sourceTree = "<group>";
+		};
+		8473D4E92217DEB4007DAACC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8473D4EA2217DEB5007DAACC /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8473D4E82217DE13007DAACC /* BankBinManager.m in Sources */,
 				8473D4B62217DE07007DAACC /* ViewController.m in Sources */,
 				8473D4C12217DE09007DAACC /* main.m in Sources */,
 				8473D4B32217DE07007DAACC /* AppDelegate.m in Sources */,
+				8473D4E72217DE13007DAACC /* BankBinModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,8 +459,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4GL2DJWWYV;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BankBinCheck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -444,6 +469,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.personal.BankBinCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -452,8 +478,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4GL2DJWWYV;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BankBinCheck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -461,6 +488,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.personal.BankBinCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
